@@ -249,7 +249,7 @@
           <label for="message">Сообщение</label>
           <textarea id="message" name="message" placeholder="Напишите пару слов о вашей цели..."></textarea>
           <button class="button" type="submit">Отправить сообщение</button>
-          <p class="form-hint">Демо-форма: для реальной отправки укажите email преподавателя в коде (см. комментарий в JavaScript).</p>
+          <p class="form-hint"></p>
           <p id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -297,7 +297,7 @@
       event.preventDefault();
 
       // Замените адрес ниже на реальную почту преподавателя.
-      const teacherEmail = 'teacher@example.com';
+      const teacherEmail = 'nnovka86@gmail.com';
 
       const data = new FormData(this);
       const subject = encodeURIComponent('Сообщение с сайта — ' + data.get('name'));
@@ -308,7 +308,7 @@
         'Сообщение:\\n' + data.get('message')
       );
 
-      if (teacherEmail === 'teacher@example.com') {
+      if (teacherEmail === 'nnovka86@gmail.com') {
         document.getElementById('formStatus').textContent =
           'Форма готова. Чтобы получать сообщения, замените teacher@example.com на свою почту в коде сайта.';
         return;
